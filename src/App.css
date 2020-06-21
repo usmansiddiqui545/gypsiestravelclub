@@ -1,0 +1,312 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primaryColor: #af9a7d;
+  --mainWhite: #fff;
+  --offWhite: #f7f7f7;
+  --mainBlack: #222;
+  --mainGrey: #ececec;
+  --darkGrey: #cfcfcf;
+  --mainTransition: all 0.3s linear;
+  --mainSpacing: 3px;
+  --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
+  --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
+
+  --blue: #007bff;
+  --indigo: #6610f2;
+  --purple: #6f42c1;
+  --pink: #e83e8c;
+  --red: #dc3545;
+  --orange: #fd7e14;
+  --yellow: #ffc107;
+  --green: #28a745;
+  --teal: #20c997;
+  --cyan: #17a2b8;
+  --white: #fff;
+  --gray: #6c757d;
+  --gray-dark: #343a40;
+  --primary: #007bff;
+  --secondary: #6c757d;
+  --success: #28a745;
+  --info: #17a2b8;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --light: #f8f9fa;
+  --dark: #343a40;
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --font-family-sans-serif: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  --font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+
+}
+
+body {
+  padding-top: 66px;
+  color: var(--mainBlack);
+  background: var(--mainWhite);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  line-height: 1.4;
+}
+
+/* Hero */
+.defaultHero,
+.aboutHero ,.contactHero {
+  min-height: calc(100vh - 58px);
+  background: url("./images/defaultBcg.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.aboutHero {
+  background-image: url("./images/pakistan.jpg");
+  min-height: calc(100vh - 146px);
+}
+.contactHero {
+  background-image: url("./images/ratti2.jpg");
+  min-height: calc(100%- 100%);
+}
+
+/* End of Hero */
+
+/* Banner */
+.banner {
+  display: inline-block;
+  background: rgba(0, 0, 0, 0.5);
+  color: var(--mainWhite);
+  padding: 2rem 1rem;
+  text-align: center;
+  text-transform: capitalize;
+  letter-spacing: var(--mainSpacing);
+}
+.banner h1 {
+  font-size: 2.5rem;
+}
+.banner div {
+  width: 10rem;
+  height: 5px;
+  background: var(--primaryColor);
+  margin: 1.7rem auto;
+}
+.banner p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+@media screen and (min-width: 576px) {
+  .banner {
+    padding: 2rem 3rem;
+  }
+  .banner h1 {
+    font-size: 3rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .banner {
+    padding: 2rem 6rem;
+  }
+  .banner h1 {
+    font-size: 4rem;
+  }
+}
+/* End of Banner */
+
+/*navbar*/
+.navbar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.56rem 2rem;
+  background: var(--mainBlack);
+  z-index: 1; 
+}
+
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+}
+.nav-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+.nav-icon {
+  font-size: 1.5rem;
+  color: var(--primaryColor);
+}
+.nav-links {
+  height: 0;
+  overflow: hidden;
+  transition: var(--mainTransition);
+  list-style-type: none;
+}
+.nav-links a {
+  display: block;
+  text-decoration: none;
+  padding: 1rem 0;
+  color: var(--mainWhite);
+  transition: var(--mainTransition);
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: var(--mainSpacing);
+}
+.nav-links a:hover {
+  color: var(--primaryColor);
+}
+
+.show-nav {
+  height: 150px;
+}
+@media screen and (min-width: 768px  ) {
+  .nav-btn {
+    display: none;
+  }
+  .nav-center {
+    max-width: 1290px;
+    max-height: 16px;
+    margin: 0 auto;
+    display: flex;  
+  }
+  .nav-links {
+    height: auto;
+    display: flex;
+    margin-left: 20rem;  
+  }
+  .nav-links a {
+    margin: 0 4rem;
+    padding: 0.3rem 0;  
+  }
+}
+
+/* Title */
+.section-title {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.section-title h4 {
+  font-size: 2rem;
+  letter-spacing: var(--mainSpacing);
+  text-transform: capitalize;
+  margin-bottom: 1rem;
+}
+.section-title div {
+  width: 5rem;
+  height: 5px;
+  margin: 0 auto;
+  background: var(--primaryColor);
+}
+/* end of Title */
+
+/* services */
+.services {
+  padding: 5rem 0;
+}
+.services {
+  background:var(--mainWhite);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  text-align: center;
+}
+.services-center {
+  width: 90vw;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+  grid-row-gap: 2rem;
+  grid-column-gap: 50px;
+}
+.service span {
+  display: inline-block;
+  color: var(--primaryColor);
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+.services h6 {
+  letter-spacing: var(--mainSpacing);
+  line-height: 25px;
+  font-style: italic;
+   text-transform:capitalize;
+}
+.services p {
+  width: 80%;
+  line-height: 25px;
+  font-style: italic;
+  margin: 0 auto;
+}
+@media screen and (min-width: 992px) {
+  .services-center {
+    width: 95vw;
+    max-width: 1170px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .services p {
+    width: 100%;
+  }
+}
+/*end of services */
+
+/* Discount Title */
+.discount-title {
+  text-align: center;
+  width: 100%;
+  height: 500px;
+  background:var(--darkGrey);
+}
+.discount-title h4 {
+  font-size: 2rem;
+  letter-spacing: var(--mainSpacing);
+  text-transform: capitalize;
+  margin-bottom: 1rem;
+}
+.discount-title div {
+  width: 5rem;
+  height: 5px;
+  margin: 0 auto;
+  background: var(--primaryColor);
+}
+/* end of Title */
+
+/* discount */
+
+.article-left{
+   padding: 0rem 6rem;
+   width: 350px;
+   height: 200px;
+   float: left;
+}
+.image-container{
+  width: 400px;
+  background-size: 400px 350px;
+  height: 350px;
+background-image: url("../src/images/attabad.JPG");
+}
+.article-right{
+  color: var(--mainBlack);
+  width: 350px;
+  margin: -20px 200px;
+  float: right;
+}
+
+.article-right h6 {
+  font-style: italic;
+  font-size: 1.5rem;
+  letter-spacing: var(--mainSpacing);
+}
+.article-right p {
+  line-height: 24px;
+  font-style: italic;
+  width: 100%;
+  margin: 1rem auto;
+  font-size: 1rem;
+  color: var(--mainBlack);
+}
+/*end of discount */
